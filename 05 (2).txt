@@ -1,0 +1,47 @@
+algoritmo "ProgramaIdadeCubo"
+// Função : O usuário insere um número qualquer o programa retorna o cubo. E o usuário insere a idade e o programa retorna a quantidade de dias vividos.
+// Autor : Ana Claudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+X,I: inteiro
+funcao CUBO (C: inteiro): inteiro
+inicio
+C <- X*X*X
+retorne C
+fimfuncao
+
+//FUNÇÃO PARA A IDADE//
+funcao IDADE (D: inteiro): inteiro
+inicio
+D <- I * 365
+retorne D
+fimfuncao
+
+//PROGRAMA PRINCIPAL CUBO//
+inicio
+escreval("")
+escreval("======================================================================")
+escreval("|                         PROGRAMA CUBO                              |")
+escreval("======================================================================")
+escreval("")
+escreval("Digite um número qualquer (inteiro): ")
+escreval("")
+leia(X)
+escreval("")
+escreval(X," ao cubo é = ",CUBO(X))
+
+//PROGRAMA PRINCIPAL DIAS VIVIDOS//
+
+escreval("")
+escreval("======================================================================")
+escreval("|                      PROGRAMA DIAS VIVIDOS                         |")
+escreval("======================================================================")
+escreval("")
+escreval("Digite a sua idade: ")
+escreval("")
+leia(I)
+escreval("")
+escreval("A quantidade de dias que você viveu foi: ",IDADE(I))
+
+fimalgoritmo

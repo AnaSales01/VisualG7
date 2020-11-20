@@ -1,0 +1,34 @@
+algoritmo "ProgramaRepetição"
+// Função : O usuário insere um número e uma string e o programa retorna a string quantas vezes foi digitado o número.
+// Autor :  Ana Claudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+N,I: inteiro
+S: caractere
+procedimento VEZES
+inicio
+escreval("")
+escreval("Digite um número qualquer (inteiro): ")
+escreval("")
+leia(N)
+escreval("")
+escreval("Digite qualquer coisa: ")
+escreval("")
+leia(S)
+fimprocedimento
+
+//PROGRAMA PRINCIPAL//
+inicio
+
+VEZES
+escreval("")
+escreval("======================================================================")
+escreval("|                  REPETIÇÃO DE STRING N VEZES                       |")
+escreval("======================================================================")
+para I de 1 ate N faca
+escreval("")
+escreval(S)
+fimpara
+
+fimalgoritmo

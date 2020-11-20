@@ -1,0 +1,33 @@
+algoritmo "ProgramaAreaTriangulo"
+// Função : O usuário insere a base e a altura do triâgulo e o programa retorna a área.
+// Autor : Ana Claudia Correa da Silva
+// Data : 13/11/2020
+// Seção de Declarações
+
+var
+B,H,A: real
+procedimento TRIANGULO
+inicio
+escreval("")
+escreval("Digite a Base do Triângulo: ")
+escreval("")
+leia(B)
+escreval("")
+escreval("Digite a Altura do Triângulo: ")
+escreval("")
+leia(H)
+funcao AREA (A: real): real
+inicio
+A <- (B*H)/2
+retorne A
+fimfuncao
+fimprocedimento
+
+//ENTRADA DE DADOS DO PROGRAMA//
+inicio
+
+TRIANGULO
+escreval("")
+escreval("A Área do Triângulo é: ",AREA(A))
+
+fimalgoritmo

@@ -1,0 +1,62 @@
+algoritmo "ProgramaCuboEsferaEquação"
+// Função : O usuário insere dois números e o programa retorne o cubo desses, o volume da esfera e a resolução da equação.
+// Autor : Ana Claudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+X,Y: inteiro
+V,V1,Eq: real
+
+funcao CUBO (C: inteiro): inteiro
+inicio
+C <- X*X*X
+retorne C
+fimfuncao
+
+funcao CUBOS (C1: inteiro): inteiro
+inicio
+C1 <- Y*Y*Y
+retorne C1
+fimfuncao
+
+//PROGRAMA PRINCIPAL//
+inicio
+escreval("")
+escreval("======================================================================")
+escreval("|                        PROGRAMA CUBO                               |")
+escreval("======================================================================")
+escreval("")
+escreval("Digite um número qualquer (inteiro): ")
+escreval("")
+leia(X)
+escreval("")
+escreval("Digite um número qualquer (inteiro): ")
+escreval("")
+leia(Y)
+escreval("")
+escreval("O cubo de ",X," é = ",CUBO(X))
+escreval("")
+escreval("O cubo de ",Y," é = ",CUBOS(Y))
+
+//PROGRAMA VOLUME ESFERA//
+escreval("")
+escreval("======================================================================")
+escreval("|                     PROGRAMA VOLUME ESFERA                         |")
+escreval("======================================================================")
+escreval("")
+V <- 4/3 * (X^3)
+V1 <- 4/3 * (Y^3)
+escreval("O volume da Esfera 1 é: ",V)
+escreval("")
+escreval("O volume da Esfera 2 é: ",V1)
+
+//PROGRAMA PARA A RESOLUÇÃO DA EQUAÇÃO//
+escreval("")
+escreval("======================================================================")
+escreval("|                      PROGRAMA EQUAÇÃO                              |")
+escreval("======================================================================")
+escreval("")
+Eq <- X^3 + Y^3 + 2
+escreval("O resultado da Equação é: ",Eq)
+
+fimalgoritmo

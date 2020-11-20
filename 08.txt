@@ -1,0 +1,37 @@
+algoritmo "ProgramaMetade"
+// Função : O usuário insere 30 números e o programa retorna a metade desses 30 números me uma outra matriz.
+// Autor : Ana Cláudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+A: vetor [1..30] de real
+I: inteiro
+procedimento METADE
+var
+M: vetor [1..30] de real
+I: inteiro
+inicio
+para I de 1 ate 30 passo 1 faca
+escreval("")
+escreval("Digite um número qualquer: ")
+escreval("")
+leia(A[i])
+fimpara
+limpatela
+para i de 1 ate 30 passo 1 faca
+M[I] <- A[I]/2
+fimpara
+escreval("")
+escreval("Os números da Matriz pela metade: ")
+para i de 1 ate 30 passo 1 faca
+escreval("")
+escreval(M[i])
+fimpara
+fimprocedimento
+
+//PROGRAMA PRINCIPAL//
+inicio
+
+METADE
+
+fimalgoritmo

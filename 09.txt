@@ -1,0 +1,34 @@
+algoritmo "PrcogramaMedia"
+// Função : O usuário insere 3 números e o programa retorna a média desses.
+// Autor : Ana Claudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+X,Y,Z: inteiro
+procedimento MEDIA
+var
+M: real
+inicio
+escreval("")
+escreval("Digite o primeiro número: ")
+escreval("")
+leia(X)
+escreval("")
+escreval("Digite o segundo número: ")
+escreval("")
+leia(Y)
+escreval("")
+escreval("Digite o terceiro número: ")
+escreval("")
+leia(Z)
+M <- (X + Y + Z)/3
+escreval("")
+escreval("A média dos 3 números é: ",M)
+fimprocedimento
+
+//PROGRAMA PRINCIPAL//
+inicio
+
+MEDIA
+
+fimalgoritmo

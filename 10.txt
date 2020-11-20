@@ -1,0 +1,29 @@
+algoritmo "ProgramaAumento"
+// Função : O usuário insere dois números e programa retorna um aumento em porcentagem do primeiro em relação ao segundo.
+// Autor :  Ana Claudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+X,Y: real
+procedimento AUMENTO
+var
+A: real
+inicio
+escreval("")
+escreval("Digite um número qualquer: ")
+escreval("")
+leia(X)
+escreval("")
+escreval("Digite um número qualquer: ")
+escreval("")
+leia(Y)
+A <- (Y/100) + x
+escreval("O aumento de x é ",A)
+fimprocedimento
+
+//PROGRAMA PRINCIPAL//
+inicio
+
+AUMENTO
+
+fimalgoritmo

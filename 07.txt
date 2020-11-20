@@ -1,0 +1,33 @@
+algoritmo "ProgramaTroca"
+// Função : O usuário insere dois números e o programa retorna a troca desses números.
+// Autor : Ana Claudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+X,Y: inteiro
+procedimento TROCA
+var
+Z,W: inteiro
+inicio
+escreval("")
+escreval("Digite um valor para X: ")
+escreval("")
+leia(X)
+escreval("")
+escreval("Digite um valor para Y: ")
+escreval("")
+leia(Y)
+W <- Y
+Z <- X
+escreval("")
+escreval("O valor de ",X," é: ",W)
+escreval("")
+escreval("O valor de ",Y," é: ",Z)
+fimprocedimento
+
+//PROGRAMA PRINCIPAL//
+inicio
+
+TROCA
+
+fimalgoritmo

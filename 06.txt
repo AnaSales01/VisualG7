@@ -1,0 +1,30 @@
+algoritmo "ProgramaPotencia"
+// Função :  O usuário insere dois números e o programa retorna a potência de um número pelo outro.
+// Autor : Ana Claudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+X,Y: inteiro
+procedimento POTENCIA
+var
+P: real
+inicio
+escreval("")
+escreval("Digite um número qualquer (inteiro): ")
+escreval("")
+leia(X)
+escreval("")
+escreval("Digite um número qualquer (inteiro): ")
+escreval("")
+leia(Y)
+P <- X^Y
+escreval("")
+escreval(X," elevado a ",Y," é: ",P)
+fimprocedimento
+
+//PROGRAMA PRINCIPAL//
+inicio
+
+POTENCIA
+
+fimalgoritmo

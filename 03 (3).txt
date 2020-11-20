@@ -1,0 +1,28 @@
+algoritmo "ProgramaCubo"
+// Função : O usuário insere um número e o programa retorna o cubo deste.
+// Autor : Ana Cláudia Correa da Silva
+// Data : 14/11/2020
+// Seção de Declarações 
+var
+N: inteiro
+procedimento ENTRADA
+inicio
+escreval("")
+escreval("Digite um número qualquer (inteiro): ")
+escreval("")
+leia(N)
+funcao CUBO (C: inteiro): inteiro
+inicio
+C <- N*N*N
+retorne C
+fimfuncao
+fimprocedimento
+
+//PROGRAMA PRINCIPAL//
+inicio
+
+ENTRADA
+escreval("")
+escreval("O cubo de ",N," é = ",CUBO(N))
+
+fimalgoritmo
