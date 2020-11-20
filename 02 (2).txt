@@ -1,0 +1,75 @@
+algoritmo "MatrizSomaSubtrai"
+// Função : O usuário insere números inteiros em 2 matrizes (4x6) e o programa retorna a soma e a subtração das mesmas.
+// Autor : Ana Claudia Correa da Silva
+// Data : 09/11/2020
+// Seção de Declarações 
+var
+
+A,B,D,S: vetor[1..4,1..6] de inteiro
+L,C: inteiro
+
+inicio
+
+//ENTRADA DE DADOS PARA A MATRIZ A (4X6)//
+escreval("")
+escreval("======================================================================")
+escreval("|                  ENTRADA DE DADOS DA MATRIZ A                      |")
+escreval("======================================================================")
+para L de 1 ate 4 faca
+para C de 1 ate 6 faca
+escreval("")
+escreval("Digite um número qualquer (inteiro)")
+escreval("")
+leia(A[L,C])
+fimpara
+fimpara
+
+//ENTRADA DE DADO PARA A MATRIZ B (4X6)//
+escreval("")
+escreval("======================================================================")
+escreval("|                  ENTRADA DE DADOS DA MATRIZ B                      |")
+escreval("======================================================================")
+para L de 1 ate 4 faca
+para C de 1 ate 6 faca
+escreval("")
+escreval("Digite um número qualquer (inteiro)")
+escreval("")
+leia(B[L,C])
+fimpara
+fimpara
+
+//SOMA DA MATRIZ A (4X6) PELA MATRIZ B (4X6)//
+para L de 1 ate 4 passo 1 faca
+para C de 1 ate 6 passo 1 faca
+S[L,C] <- A[L,C] + B[L,C]
+fimpara
+fimpara
+escreval("")
+escreval("======================================================================")
+escreval("|              SOMA DA MATRIZ A(4X6) E MATRIZ B (4X6)                |")
+escreval("======================================================================")
+escreval("")
+para L de 1 ate 4 faca
+para C de 1 ate 6 faca
+escreval(S[L,C])
+fimpara
+fimpara
+
+//SUBTRAÇÃO DA MATRIZ A(4X6) E MATRIZ B (4X6)//
+para L de 1 ate 4 passo 1 faca
+para C de 1 ate 6 passo 1 faca
+D[L,C] <- A[L,C] - B[L,C]
+fimpara
+fimpara
+escreval("")
+escreval("======================================================================")
+escreval("|          SUBTRAÇÃO DA MATRIZ A (4X6) E MATRIZ B (4X6)              |")
+escreval("======================================================================")
+escreval("")
+para L de 1 ate 4 faca
+para C de 1 ate 6 faca
+escreval(D[L,C])
+fimpara
+fimpara
+
+fimalgoritmo

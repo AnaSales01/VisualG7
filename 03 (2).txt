@@ -1,0 +1,84 @@
+algoritmo "MatrizSomaElementos"
+// Função : O usuário insere números inteiros para preencher a matriz (4x4) e programa volta a soma de algumas linhas e colunas
+// Autor : Ana Claudia Correa da Silva
+// Data : 09/11/2020
+// Seção de Declarações 
+var
+
+A: vetor [1..4,1..4] de inteiro
+L,C: inteiro
+soma: inteiro
+
+inicio
+
+//INSERIR DADOS NA MATRIZ A (4X4)//
+escreval("")
+escreval("======================================================================")
+escreval("|               INSIRA OS DADOS NA MATRIZ A (4X4)                    |")
+escreval("======================================================================")
+escreval("")
+para L de 1 ate 4 faca
+para C de 1 ate 4 faca
+escreval("Digite qualquer número (inteiro): ")
+escreval("")
+leia(A[L,C])
+fimpara
+fimpara
+
+//SOMA DAS 2 PRIMEIRAS LINHAS E DAS 2 PRIMEIRAS COLUNAS//
+soma <- 0
+para L de 1 ate 4 faca
+para C de 1 ate 4 faca
+soma <- A[1,1] + A[2,1] + A[1,2] + A[2,2]
+fimpara
+fimpara
+escreval("")
+escreval("======================================================================")
+escreval("|     SOMA DAS LINHAS 1,2 E DAS COLUNAS 1,2 DA MATRIZ A (4X4)        |")
+escreval("======================================================================")
+escreval("")
+escreval(soma)
+
+//SOMA DAS DUAS ÚLTIMAS LINHAS DAS DUAS ÚLTIMAS COLUNAS//
+soma <- 0
+para L de 1 ate 4 faca
+para C de 1 ate 4 faca
+soma <- A[3,3] + A[3,4] + A[4,3] + A[4,4]
+fimpara
+fimpara
+escreval("")
+escreval("======================================================================")
+escreval("|     SOMA DAS LINHAS 3,4 E DAS COLUNAS 3,4 DA MATRIZ A (4X4)        |")
+escreval("======================================================================")
+escreval("")
+escreval(soma)
+
+//SOMA PARTE DA MATRIZ//
+soma <- 0
+para L de 1 ate 4 faca
+para C de 1 ate 4 faca
+soma <- A[1,1] + A[2,1] + A[2,2] + A[3,1] + A[3,2] + A[3,3] + A[4,1] + A[4,2] + A[4,3] + A[4,4]
+fimpara
+fimpara
+escreval("")
+escreval("======================================================================")
+escreval("|                 SOMA DE PARTE DA MATRIZ A (4X4)                    |")
+escreval("======================================================================")
+escreval("")
+escreval(soma)
+
+//SOMA DA OUTRA PARTE DA MATRIZ//
+soma <- 0
+para L de 1 ate 4 faca
+para C de 1 ate 4 faca
+soma <- A[1,2] + A[1,3] + A[1,4] + A[2,3] + A[2,4] + A[3,4]
+fimpara
+fimpara
+escreval("")
+escreval("======================================================================")
+escreval("|                  SOMA DE PARTE DA MATRIZ A (4X4)                   |")
+escreval("======================================================================")
+escreval("")
+escreval(soma)
+
+fimalgoritmo

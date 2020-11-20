@@ -1,0 +1,59 @@
+algoritmo "MatrizNoVetor"
+// Função : O usuário insere elementos em uma matriz (5x5) e o programa retorna a soma das colunas e soma das linhas em um vetor.
+// Autor : Ana Claudia Correa da Silva
+// Data : 09/11/2020
+// Seção de Declarações 
+var
+
+G: vetor[1..5,1..5] de inteiro
+SL,SC: vetor[1..5] de inteiro
+L,C: inteiro
+
+inicio
+
+//ENTRADA DE DADOS NA MATRIZ G (5X5)//
+escreval("")
+escreval("======================================================================")
+escreval("|                      ENTRADA DE DADOS NA MATRIZ                    |")
+escreval("======================================================================")
+escreval("")
+para L de 1 ate 5 faca
+para C de 1 ate 5 faca
+escreval("")
+escreval("Digite um número qualquer (inteiro): ")
+escreval("")
+leia(G[L,C])
+fimpara
+fimpara
+
+//SOMA DAS LINHAS DA MATRIZ G(5X5) //
+para L de 1 ate 5 faca
+para C de 1 ate 5 faca
+SL[L] <- SL[L] + G[L,C]
+fimpara
+fimpara
+escreval("")
+escreval("======================================================================")
+escreval("|                         SOMA DAS LINHAS                            |")
+escreval("======================================================================")
+escreval("")
+para L de 1 ate 5 faca
+escreval(SL[L])
+fimpara
+
+//SOMA DAS COLUNAS DA MATRIZ G(5X5)//
+para L de 1 ate 5 faca
+para C de 1 ate 5 faca
+SC[C] <- SC[C] + G[L,C]
+fimpara
+fimpara
+escreval("")
+escreval("======================================================================")
+escreval("|                         SOMA DAS COLUNAS                           |")
+escreval("======================================================================")
+escreval("")
+para C de 1 ate 5 faca
+escreval(SC[C])
+fimpara
+
+fimalgoritmo
