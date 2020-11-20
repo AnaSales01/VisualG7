@@ -1,0 +1,171 @@
+Algoritmo "ProgramaBimestrais"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Cláudia Iwakami
+// Descrição   : O usuário insere informações dos alunos e programa retorna se foi aprovado ou reprovado, além de colocar em ordem alfabética e pesquisa por nome.
+// Autor(a)    : Ana Claudia Correa da Silva
+// Data atual  : 06/11/2020
+tipo
+
+CADASTRO = registro
+         NOME: caractere
+         N1: real
+         N2: real
+         N3: real
+         N4: real
+         M: real
+         fimregistro
+Var
+
+CLASS: vetor [1..25] de CADASTRO
+NOTA: vetor [1..4] de real
+I,J,MENU: inteiro
+X: CADASTRO
+Resp,Nome: caractere
+Acha: logico
+SOMA,MEDIA: real
+comeco,final,meio: inteiro
+Inicio
+
+//MENU DO PROGRAMA//
+MENU <- 0
+enquanto (MENU <> 5) faca
+escreval(" ____________________________________________________________________ ")
+escreval("|                                                                    |")
+escreval("|                                MENU                                |")
+escreval("|____________________________________________________________________|")
+escreval("|                                                                    |")
+escreval("|          (1) Inserir Nomes dos alunos                              |")
+escreval("|            (2) Resultado dos Alunos                                |")
+escreval("|              (3) Ordem Alfabética                                  |")
+escreval("|                (4) Pesquisar por Aluno                             |")
+escreval("|                  (5) SAIR DO PROGRAMA                              |")
+escreval("|____________________________________________________________________|")
+escreval("")
+escreval("            ****Digite o NÚMERO que você deseja****                   ")
+escreval("")
+leia(MENU)
+limpatela
+
+              se (MENU = 1) entao
+//ENTRADA DE DADOS DAS INFORMAÇÕES DOS CONTATOS//
+escreval("")
+escreval("======================================================================")
+escreval("|                        CADASTRE OS ALUNOS                          |")
+escreval("======================================================================")
+para I de 1 ate 5 passo 1 faca
+     escreval("")
+     escreval("Digite o NOME do Aluno: ",CLASS[I].NOME)
+     escreval("")
+     leia(CLASS[I].NOME)
+     escreval("")
+     escreval("Digite a primeira NOTA", CLASS[I].N1)
+     escreval("")
+     leia(CLASS[I].N1)
+     escreval("")
+     escreval("Digite a segunda NOTA", CLASS[I].N2)
+     escreval("")
+     leia(CLASS[I].N2)
+     escreval("")
+     escreval("Digite a terceira NOTA", CLASS[I].N3)
+     escreval("")
+     leia(CLASS[I].N3)
+     escreval("")
+     escreval("Digite a quarta NOTA", CLASS[I].N4)
+     escreval("")
+     leia(CLASS[I].N4)
+CLASS[I].M <- (CLASS[I].N1 + CLASS[I].N2 + CLASS[I].N3 + CLASS[I].N4)/4
+     limpatela
+fimpara
+                 fimse
+
+                 se (MENU = 2) entao
+//RESULTADO DO ALUNOS//
+escreval("")
+escreval("======================================================================")
+escreval("|                          RESULTADO DOS ALUNOS                      |")
+escreval("======================================================================")
+para i de 1 ate 5 faca
+escreval("")
+escreval("NOME: ",CLASS[I].NOME)
+escreval("")
+escreval("MÉDIA: ",CLASS[I].M)
+ se (CLASS[I].M >= 5) entao
+escreval("")
+escreval("APROVADO!!")
+senao
+escreval("")
+escreval("REPROVADO!!")
+      fimse
+fimpara
+              fimse
+
+                           se (MENU = 3) entao
+//ORDENAÇÃO POR ORDEM DE NOME//
+     para I de 1 ate 4 faca
+        para J de I+1 ate 5 faca
+             se CLASS[I].NOME > CLASS[J].NOME entao
+                X <- CLASS.NOME[I]
+                CLASS[I].NOME <- CLASS[J].NOME
+                CLASS[J].NOME <- X
+             fimse
+        fimpara
+     fimpara
+            escreval("==========================================================")
+            escreval("|                NOMES EM ORDEM ALFABÉTICA               |")
+            escreval("==========================================================")
+           para i de 1 ate 5 faca
+                escreval(CLASS[I].NOME)
+           fimpara
+                           fimse
+
+                            se (MENU = 4) entao
+//PESQUISA POR NOME DOS CONTATOS//
+escreval("")
+escreval("======================================================================")
+escreval("|                       FAÇA A SUA PESQUISA                          |")
+escreval("======================================================================")
+         escreval("")
+         escreval("Qual o NOME do Aluno você deseja pesquisar? ")
+         escreval("")
+         leia(Nome)
+         comeco <- 1
+         final <- 25
+         acha <- falso
+    enquanto (comeco <= final) e (Acha = falso) faca
+             meio <- (comeco + final) div 2
+             se (Nome = CLASS[meio].NOME) entao
+                Acha <- verdadeiro
+             senao
+             se (Nome < CLASS[meio].NOME) entao
+                final <- meio - 1
+             senao
+                  comeco <- meio + 1
+             fimse
+             fimse
+    fimenquanto
+               se (Acha = verdadeiro) entao
+                  escreval("")
+                  escreval("ALUNO: ",CLASS[meio].NOME)
+                  escreval("")
+               fimse
+                  escreval("")
+                  escreval("MÉDIA: ",CLASS[I].M)
+               se (CLASS[I].M >= 5) entao
+                  escreval("")
+                  escreval("APROVADO!")
+               senao
+                  escreval("")
+                  escreval("REPROVADO!!")
+               fimse
+               senao
+                    escreval("")
+                    escreval("ALUNO INEXISTENTE!!")
+               fimse
+
+fimenquanto
+                              fimse
+
+fimenquanto
+
+Fimalgoritmo
+

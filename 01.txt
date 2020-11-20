@@ -1,0 +1,140 @@
+Algoritmo "ProgramaAgenda"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Cláudia Iwakami
+// Descrição   : O usuário insere informações do contato e programa retorna a ordem alfabética, pode fazer pesquisas por nome e ver todos os contatos.
+// Autor(a)    : Ana Claudia Correa da Silva
+// Data atual  : 06/11/2020
+tipo
+
+AGENDA = registro
+         NOME: caractere
+         NDERECO: caractere
+         TELEFONE: inteiro
+         fimregistro
+Var
+
+CONTATO: vetor [1..10] de AGENDA
+I,J,K,M: inteiro
+X: AGENDA
+Resp,Nome: caractere
+Acha: logico
+
+Inicio
+M <- 0
+enquanto (M <> 5) faca
+escreval(" ____________________________________________________________________ ")
+escreval("|                                                                    |")
+escreval("|                                MENU                                |")
+escreval("|____________________________________________________________________|")
+escreval("|                                                                    |")
+escreval("|          (1) Inserir Contatos na Agenda                            |")
+escreval("|            (2) Contatos em Ordem Alfabética                        |")
+escreval("|              (3) Pesquisar Contatos                                |")
+escreval("|                (4) Todos os Contatos da Agenda                     |")
+escreval("|                  (5) SAIR DO PROGRAMA                              |")
+escreval("|____________________________________________________________________|")
+escreval("")
+escreval("            ****Digite o NÚMERO que você deseja****                   ")
+escreval("")
+leia(M)
+limpatela
+                        se M = 1 entao
+
+//ENTRADA DE DADOS DAS INFORMAÇÕES DOS CONTATOS//
+para I de 1 ate 10 passo 1 faca
+     escreval("")
+     escreval("Digite o NOME do contato: ",CONTATO[I].NOME)
+     escreval("")
+     leia(CONTATO[I].NOME)
+     escreval("")
+     escreval("Digite o ENDEREÇO do contato: ",CONTATO[I].NDERECO)
+     escreval("")
+     leia(CONTATO[I].NDERECO)
+     escreval("")
+     escreval("Digite o TELEFONE do contato: ",CONTATO[I].TELEFONE)
+     escreval("")
+     leia(CONTATO[I].TELEFONE)
+     limpatela
+fimpara
+
+                       se M = 2 entao
+
+//ORDENAÇÃO POR ORDEM DE NOME//
+     para j de 1 ate 9 faca
+        para k de j+1 ate 10 faca
+             se CONTATO[J].NOME > CONTATO[K].NOME entao
+                X <- CONTATO[J]
+                CONTATO[J] <- CONTATO[K]
+                CONTATO[K] <- X
+             fimse
+        fimpara
+     fimpara
+            escreval("==========================================================")
+            escreval("|          NOMES ORDENADOS EM ORDEM ALFABÉTICA           |")
+            escreval("==========================================================")
+           para i de 1 ate 10 faca
+                escreval(CONTATO[I].NOME)
+           fimpara
+           limpatela
+
+                       se M = 3 entao
+
+//PESQUISA POR NOME DOS CONTATOS//
+           Resp <- "Sim"
+enquanto (Resp = "Sim") faca
+         escreval("")
+         escreval("Qual o NOME do contato você deseja pesquisar? ")
+         escreval("")
+         leia(Nome)
+         I <- 1
+         Acha <- falso
+    enquanto (I <= 10) e (Acha = falso) faca
+             se (Nome = CONTATO[I].NOME) entao
+                Acha <- verdadeiro
+             senao
+                  i <- i + 1
+             fimse
+    fimenquanto
+               se (Acha = verdadeiro) entao
+                  escreval("")
+                  escreval("ENDEREÇO: ",CONTATO[I].NDERECO)
+                  escreval("")
+                  escreval("TELEFONE: ",CONTATO[I].TELEFONE)
+               senao
+                    escreval("")
+                    escreval("CONTATO INEXISTENTE!!")
+               fimse
+                    escreval("")
+                    escreval("Deseja continuar a pesquisa? ")
+                    escreval("")
+                    leia(Resp)
+fimenquanto
+limpatela
+
+                        se M = 4 entao
+
+//IMPRESSÃO DOS CONTATOS//
+para i de 1 ate 10 faca
+escreval("")
+escreval("======================================================================")
+escreval("|                             CONTATOS                               |")
+escreval("======================================================================")
+escreval(CONTATO[I].NOME)
+escreval("")
+escreval(CONTATO[I].NDERECO)
+escreval("")
+escreval(CONTATO[I].TELEFONE)
+fimpara
+
+                             se M = 5 entao
+escreval("")
+escreval("                    **OBRIGADA PELA PARTICIPAÇÃO**                    ")
+
+                              fimse
+                              fimse
+                              fimse
+                              fimse
+                              fimse
+
+
+Fimalgoritmo

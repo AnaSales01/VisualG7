@@ -1,0 +1,130 @@
+Algoritmo "ProgramaMedida"
+// Disciplina   : Lógica de Programação
+// Professor   : Cláudio Iwakami 
+// Descrição   : O usuário insere as alturas dos clientes e o programa retorna as alturas separadamente.
+// Autor(a)    : Ana Claudia Correa da Silva
+// Data atual  : 19/11/2020
+
+tipo
+DADOS = registro
+       NOME:caractere
+       ALTURA:real
+       A1:logico
+       A2:logico
+       A3:logico
+       fimregistro
+
+Var
+
+MEDIDA: vetor [1..15] de DADOS
+MENU: inteiro
+I: inteiro
+MEDIA,SOMA: real
+
+Inicio
+
+MENU <- 0
+enquanto (MENU <> 6) faca
+escreval("")
+escreval(" ____________________________________________________________________ ")
+escreval("|                                                                    |")
+escreval("|                                 MENU                               |")
+escreval("|____________________________________________________________________|")
+escreval("|     (1) Cadastrar Pessoas                                          |")
+escreval("|       (2) Registro Menores e iguais a 1.6 M                        |")
+escreval("|         (3) Registro Maiores que 1.6 M                             |")
+escreval("|           (4) Registro Maiores e Menores que 1.6 M                 |")
+escreval("|             (5) Média das Alturas                                  |")
+escreval("|               (6) SAIR DO PROGRAMA                                 |")
+escreval("|____________________________________________________________________|")
+escreval("")
+escreval("Digite a o NÚMERO da Opção que você deseja: ")
+escreval("")
+leia(MENU)
+
+          se (MENU = 1) entao
+para i de 1 ate 5 passo 1 faca
+     escreval("")
+     escreval("|====================================================================|")
+     escreval("|                 CADASTRO DAS PESSOAS NO SISTEMA                    |")
+     escreval("|====================================================================|")
+     escreval("")
+     escreval("USUÁRIO", i)
+     escreval("")
+     escreva ("Digite o Nome da Pessoa: ")
+     leia(MEDIDA[I].NOME)
+     escreval("")
+     escreva ("Digite a Altura da Pessoa: ")
+     escreval("")
+     leia(MEDIDA[I].ALTURA)
+     limpatela
+SOMA <- SOMA + MEDIDA[I].ALTURA
+     se (MEDIDA[I].ALTURA <= 1.6) entao
+        MEDIDA[I].A1 <- verdadeiro
+     fimse
+     se (MEDIDA[I].ALTURA > 1.6) entao
+        MEDIDA[I].A2 <- verdadeiro
+     fimse
+     se (MEDIDA[I].ALTURA > 1.6) e (MEDIDA[I].ALTURA < 2.0) entao
+        MEDIDA[I].A3<- verdadeiro
+     fimse
+fimpara
+        fimse
+
+      se (MENU = 2) entao
+MEDIA <- SOMA /5
+escreval("")
+escreval("|====================================================================|")
+escreval("|              REGISTRO PESSOAS COM MENOS OU IGUAL A 1.6 M           |")
+escreval("|====================================================================|")
+escreval("")
+para I de 1 ate 5 faca
+     se (MEDIDA[I].A1 = verdadeiro) entao
+escreval ("NOME: ",MEDIDA[I].NOME)
+escreval("")
+escreval ("ALTURA: ",MEDIDA[I].ALTURA)
+     fimse
+fimpara
+       fimse
+
+         se (MENU = 3) entao
+escreval("")
+escreval("|====================================================================|")
+escreval("|                REGISTRO DE PESSOAS COM MAIS DE 1.6 M               |")
+escreval("|====================================================================|")
+escreval("")
+para I de 1 ate 5 faca
+        se (MEDIDA[I].A2 = verdadeiro) entao
+escreval("NOME: ",MEDIDA[I].NOME)
+escreval("")
+escreval("ALTURA: ",MEDIDA[I].ALTURA)
+       fimse
+fimpara
+             fimse
+
+          se (MENU = 4) entao
+escreval("")
+escreval("|====================================================================|")
+escreval("|       REGISTRO DE PESSOAS COM MAIS DE 1.6 M E MENOS QUE 2.00 M     |")
+escreval("|====================================================================|")
+escreval("")
+para I de 1 ate 5 passo 1 faca
+        se (MEDIDA[I].A3 = verdadeiro) entao
+escreval("NOME: ",MEDIDA[I].NOME)
+escreval("")
+escreval("ALTURA: ",MEDIDA[I].ALTURA)
+        fimse
+fimpara
+        fimse
+
+        se (MENU = 5) entao
+escreval("")
+escreval("|====================================================================|")
+escreval("|                        MÉDIA DAS ALTURAS                           |")
+escreval("|====================================================================|")
+escreval("")
+escreval (MEDIA)
+           fimse
+fimenquanto
+
+Fimalgoritmo
